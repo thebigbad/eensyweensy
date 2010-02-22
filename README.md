@@ -1,12 +1,18 @@
 Eensy Weensy
 ====
 
-Eensy Weensy is an example webspider. It's designed to scrape urls of blog posts from [http://borderstylo.com](http://borderstylo.com) and output them to a text file. The example is silly, but along with a forthcoming blog post, this should be enough to get you started writing your own Poor Man's webspider.
+Eensy Weensy is an example webspider. It's designed to scrape urls of blog posts from <http://borderstylo.com> and output them to a text file. The example is silly, but along with a forthcoming blog post, this should be enough to get you started writing your own Poor Man's webspider.
 
 Naming
 -----
 
-The Eensy Weensy Spider is the protagonist of a children's song (see wiki's [Eensy Weensy Spider](http://en.wikipedia.org/wiki/Eensy_Weensy_Spider) for more details). I feel its' smallness, fragility and resilience are qualities which are also found in this webcrawler (riiight).
+The Eensy Weensy Spider is the protagonist of a children's song (see wiki's [Eensy Weensy Spider](http://en.wikipedia.org/wiki/Eensy_Weensy_Spider) for more details).
+
+I feel its' smallness, fragility and resilience are admirable qualities which are also found in this webcrawler. While the spider's ascendency, fall, and triumphant return more closely parallels stories like Henley's "Invictus," Dante's "The Diving Comedy," and Fitzgerald's "The Curious Case of Benjamin Button", it's also a fairly accurate depiction of the life and times of a webcrawler.
+
+If any of this sounds sensible, I have a bridge I'd like to sell you.
+
+"Eensy Weensy" is pretty fun to say, and is the name of a spider. Case closed.
 
 Prerequisites
 -----
