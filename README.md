@@ -13,10 +13,10 @@ Prerequisites
 Usage
 -----
 
-# Save this project wherever your PHP scripts like to be kept (/var/www for example)
-# Edit spider.home in eensyweensy.user.js to point to eensyweensy.php
-# Open eensyweensy.user.js in Firefox, then click "Install"
-# Open http://borderstylo.com/posts in Firefox
+* Save this project wherever your PHP scripts like to be kept (/var/www for example)
+* Edit spider.home in eensyweensy.user.js to point to eensyweensy.php
+* Open eensyweensy.user.js in Firefox, then click "Install"
+* Open http://borderstylo.com/posts in Firefox
 
 TODO
 
