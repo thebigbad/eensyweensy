@@ -28,6 +28,6 @@ Usage
 License
 -------
 
-Copyright 2010 Ryan Wolf
+Copyright 2010 Ryan Wolf <rwolf@borderstylo.com>
 
 Eensy Weensy is released under the Tumbolia Public License. See LICENSE for more details.
