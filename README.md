@@ -3,6 +3,11 @@ Eensy Weensy
 
 Eensy Weensy is an example webspider. It's designed to scrape urls of blog posts from [http://borderstylo.com](http://borderstylo.com) and output them to a text file. The example is silly, but along with a forthcoming blog post, this should be enough to get you started writing your own Poor Man's webspider.
 
+Naming
+-----
+
+The Eensy Weensy Spider is the protagonist of a children's song (see wiki's [Eensy Weensy Spider](http://en.wikipedia.org/wiki/Eensy_Weensy_Spider) for more details). I feel its' smallness, fragility and resilience are qualities which are also found in this webcrawler (riiight).
+
 Prerequisites
 -----
 
@@ -16,7 +21,7 @@ Usage
 * Save this project wherever your PHP scripts like to be kept (/var/www for example)
 * Edit spider.home in eensyweensy.user.js to point to eensyweensy.php
 * Open eensyweensy.user.js in Firefox, then click "Install"
-* Open [http://borderstylo.com/posts](http://borderstylo.com/posts) in Firefox
+* Open [http://borderstylo.com/posts](http://borderstylo.com/posts)
 
  TODO: once eensyweensy.php is written, include sample output here 
 
