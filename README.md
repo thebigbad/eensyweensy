@@ -20,4 +20,4 @@ License
 
 Copyright 2010 Ryan Wolf
 
-Eensy Weensy and is released under the Tumbolia Public License. See [LICENSE](blob/master/LICENSE) for more details.
+Eensy Weensy and is released under the Tumbolia Public License. See LICENSE for more details.
