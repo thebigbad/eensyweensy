@@ -17,7 +17,7 @@ If any of this sounds sensible, I have a bridge I'd like to sell you.
 Prerequisites
 -----
 
-* [Firefox](http://www.mozilla.com/en-US/firefox/firefox.html)
+* [Firefox](http://www.mozilla.com/en-US/firefox/firefox.html) -- the version here is important (3.5+), since we'll be making using of [native JSON encoding/decoding](https://developer.mozilla.org/En/Using_native_JSON).
 * [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/748)
 * PHP installed on a server you have access to (like localhost). When I was setting up my first LAMP server, I went to [Ubuntu's directions](https://help.ubuntu.com/community/ApacheMySQLPHP) and copied and pasted my way to victory--maybe it'll help you. Advanced readers will be able to adapt the PHP bit to whatever language they like.
 
