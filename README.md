@@ -29,7 +29,18 @@ Usage
 * Open eensyweensy.user.js in Firefox, then click "Install"
 * Open [http://borderstylo.com/posts](http://borderstylo.com/posts)
 
- TODO: once eensyweensy.php is written, include sample output here 
+Output
+-----
+
+Three pages will load in quick succession, ending up on <http://hampsterdance.com> (you're welcome). The folder containing eensyweensy.php will now have a output.txt file, with one url per line:
+
+    ...
+    http://borderstylo.com/posts/8-wordless-wednesday-16
+    http://borderstylo.com/posts/7-types-and-type-theory
+    http://borderstylo.com/posts/6-border-stylo-and-the-con-of-2009
+    http://borderstylo.com/posts/5-gems-in-scheme
+    http://borderstylo.com/posts/1-border-stylo-site-launches
+    ...
 
 License
 -------
