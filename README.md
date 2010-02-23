@@ -29,10 +29,7 @@ Usage
 * Open eensyweensy.user.js in Firefox, then click "Install"
 * Open [http://borderstylo.com/posts](http://borderstylo.com/posts)
 
-Output
------
-
-Three pages will load in quick succession, ending up on <http://hampsterdance.com> (you're welcome). The folder containing eensyweensy.php will now have a output.txt file, with one url per line:
+Three pages will load in quick succession, ending up on <http://hampsterdance.com> (you're welcome). The folder containing eensyweensy.php will now have an output.txt file, with one url per line:
 
     ...
     http://borderstylo.com/posts/8-wordless-wednesday-16
