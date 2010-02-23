@@ -9,23 +9,22 @@
 // Tumbolia Public License. See LICENSE for more details.
 
 var Spider = function () {
+  // defaults
   this.jquery = 'http://jquery.com/src/jquery-latest.js';
-  this.home = 'http://google.com';
-  this.grabber = function ($) {
-    var data = { url: document.location.href; };
-    return data;
-  };
+  this.home = 'http://localhost/eensyweensy/eensyweensy.php';
+  this.grabber = function ($) {};
 };
+
 Spider.prototype.insert_jquery = function () {
   /* source: http://joanpiedra.com/jquery/greasemonkey/ */
-  var GM_JQ = doc.createElement('script');
-  GM_JQ.src = this.;
+  var GM_JQ = document.createElement('script');
+  GM_JQ.src = this.jquery;
   GM_JQ.type = 'text/javascript';
   document.getElementsByTagName('head')[0].appendChild(GM_JQ);
   var that = this;
   function GM_wait () {
     if (typeof unsafeWindow.jQuery == 'undefined') {
-      window.setTimeout(GM_wait,100);
+      window.setTimeout(GM_wait, 100);
     }
     else {
       that.$ = unsafeWindow.jQuery;
@@ -34,29 +33,39 @@ Spider.prototype.insert_jquery = function () {
   }
   GM_wait();
 };
+
 Spider.prototype.grab_data = function ($) {
-  var data = this.grabber(that.$);
+  var data = this.grabber(this.$);
   this.phone_home(data);
 };
+
 Spider.prototype.phone_home = function (data) {
   /* source: http://diveintogreasemonkey.org/api/gm_xmlhttprequest.html */
   GM_xmlhttpRequest({
     method: 'POST',
-    data: this.$.stringify(data),
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded"
+    },
+    data: "data=" + JSON.stringify(data),
     url: this.home,
     onload: this.handle_results,
   });
 };
+
 Spider.prototype.handle_results = function (response) {
-  alert(response.responseText);
+  var data = JSON.parse(response.responseText);
+  if (data.error) {
+    alert(data.error);
+    return;
+  }
 };
+
 Spider.prototype.go = function () {
   this.insert_jquery();
 };
 
-/* our fun starts here */
+// our particular spider
 var spider = new Spider();
-spider.home = 'http://localhost/borderstylo_grabber.php'
 spider.grabber = function ($) {
   var urls = [];
   $('.post-footer > a:nth-child(2)').each(function (i, node) {
