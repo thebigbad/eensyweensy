@@ -53,11 +53,17 @@ Spider.prototype.phone_home = function (data) {
 };
 
 Spider.prototype.handle_results = function (response) {
-  var data = JSON.parse(response.responseText);
-  if (data.error) {
-    alert(data.error);
+  if (!response) { alert("no response"); return; }
+  var data;
+  // JSON.parse barfs top-level errors on failure
+  try {
+    data = JSON.parse(response.responseText);
+  }
+  catch (e) {
+    alert(JSON.stringify(response)); // debugging parties!
     return;
   }
+  if (data.error) { alert(data.error); return; }
 };
 
 Spider.prototype.go = function () {
@@ -74,6 +80,7 @@ spider.grabber = function ($) {
   var next_page_button = $('.next_page');
   var on_last_page = next_page_button.hasClass('disabled');
   var data = {
+    href: document.location.href;
     urls: urls,
     on_last_page: on_last_page,
   };

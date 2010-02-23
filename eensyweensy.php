@@ -16,7 +16,14 @@ if (is_null($data["on_last_page"]) || !is_array($data["urls"])) {
   $results["error"] = "validation error: missing on_last_page or urls";
 }
 else {
-  $results["error"] = "not really an error, success!";
+  // http://www.tizag.com/phpT/fileappend.php
+  $file_name = "output.txt";
+  $file_handle = fopen($file_name, "a+");
+  foreach ($data["urls"] as $url) {
+    fwrite($file_handle, "$url\n");
+  }
+  fclose($file_handle);
+  $results["error"] = "yay";
 }
 
 echo json_encode($results);
