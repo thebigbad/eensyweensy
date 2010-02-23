@@ -40,7 +40,6 @@ Three pages will load in quick succession, ending up on <http://hampsterdance.co
     http://borderstylo.com/posts/6-border-stylo-and-the-con-of-2009
     http://borderstylo.com/posts/5-gems-in-scheme
     http://borderstylo.com/posts/1-border-stylo-site-launches
-    ...
 
 License
 -------
