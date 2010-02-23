@@ -12,7 +12,8 @@ if (!isset($_POST["data"])) {
 $data = json_decode(stripslashes($_REQUEST["data"]), true);
 $results = array();
 
-if (is_null($data["on_last_page"]) || !is_array($data["urls"])) {
+if (is_null($data["href"]) || is_null($data["on_last_page"])
+      || !is_array($data["urls"])) {
   $results["error"] = "validation error: missing on_last_page or urls";
 }
 else {
@@ -23,7 +24,25 @@ else {
     fwrite($file_handle, "$url\n");
   }
   fclose($file_handle);
-  $results["error"] = "yay";
+
+  if ($data["on_last_page"] == "true") {
+    $results["url"] = "http://hampsterdance.com";
+  }
+  else {
+    function next_url ($matches) {
+      if (count($matches) == 2) {
+        return $matches[1] . "?page=2";
+      }
+      $page = (int) $matches[3];
+      $page++;
+      return $matches[1] . "?page=$page";
+    };
+    $results["url"] = preg_replace_callback(
+      "/^([^\?]+)(\?page=(\d*))?$/",
+      "next_url",
+      $data["href"]
+    );
+  }
 }
 
 echo json_encode($results);

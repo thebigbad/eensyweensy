@@ -12,7 +12,7 @@ var Spider = function () {
   // defaults
   this.jquery = 'http://jquery.com/src/jquery-latest.js';
   this.home = 'http://localhost/eensyweensy/eensyweensy.php';
-  this.grabber = function ($) {};
+  this.grabber = function ($) { return {}; };
 };
 
 Spider.prototype.insert_jquery = function () {
@@ -27,15 +27,15 @@ Spider.prototype.insert_jquery = function () {
       window.setTimeout(GM_wait, 100);
     }
     else {
-      that.$ = unsafeWindow.jQuery;
-      that.grab_data();
+      var $ = unsafeWindow.jQuery;
+      that.grab_data($);
     }
   }
   GM_wait();
 };
 
 Spider.prototype.grab_data = function ($) {
-  var data = this.grabber(this.$);
+  var data = this.grabber($);
   this.phone_home(data);
 };
 
@@ -53,17 +53,19 @@ Spider.prototype.phone_home = function (data) {
 };
 
 Spider.prototype.handle_results = function (response) {
-  if (!response) { alert("no response"); return; }
   var data;
   // JSON.parse barfs top-level errors on failure
   try {
     data = JSON.parse(response.responseText);
   }
   catch (e) {
-    alert(JSON.stringify(response)); // debugging parties!
+    alert("debugging party:\n" + JSON.stringify(response));
     return;
   }
   if (data.error) { alert(data.error); return; }
+  if (!data.url) { alert("no error, but no url to go to"); return; }
+
+  document.location.assign(data.url);
 };
 
 Spider.prototype.go = function () {
@@ -80,7 +82,7 @@ spider.grabber = function ($) {
   var next_page_button = $('.next_page');
   var on_last_page = next_page_button.hasClass('disabled');
   var data = {
-    href: document.location.href;
+    href: document.location.href,
     urls: urls,
     on_last_page: on_last_page,
   };
