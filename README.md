@@ -1,7 +1,7 @@
 Eensy Weensy
 ====
 
-Eensy Weensy is an example webspider. It's designed to scrape urls of blog posts from <http://borderstylo.com> and output them to a text file. The example is silly, but along with a forthcoming blog post, this should be enough to get you started writing your own Poor Man's webspider.
+Eensy Weensy is an example webspider. It's designed to scrape urls of blog posts from <http://borderstylo.com> and output them to a text file. The example is silly, but along with my blog post ["Poor Man's Webspider"](http://borderstylo.com/posts/102-poor-mans-webspider), this should be enough to get you started writing your own.
 
 Naming
 -----
