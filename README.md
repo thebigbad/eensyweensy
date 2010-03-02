@@ -44,3 +44,5 @@ License
 Copyright 2010 Ryan Wolf <rwolf@borderstylo.com>
 
 Eensy Weensy is released under the Tumbolia Public License. See LICENSE for more details.
+
+Eensy Weensy is free software. It comes without any warranty, to the extent permitted by applicable law.
