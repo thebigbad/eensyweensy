@@ -3,10 +3,6 @@
 // @namespace      example.com
 // @include        http://borderstylo.com/posts*
 // ==/UserScript==
-// Copyright 2010 Ryan Wolf <rwolf@borderstylo.com>
-//
-// This file is part of eensyweensy and is released under the
-// Tumbolia Public License. See LICENSE for more details.
 
 var Spider = function () {
   // defaults

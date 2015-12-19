@@ -1,9 +1,4 @@
 <?php
-// Copyright 2010 Ryan Wolf <rwolf@borderstylo.com>
-//
-// This file is part of eensyweensy and is released under the
-// Tumbolia Public License. See LICENSE for more details.
-
 if (!isset($_POST["data"])) {
   echo "<pre>You need to feed me some DATA.\nDada Dada Dada.</pre>";
   exit;
